@@ -1,0 +1,33 @@
+#!/bin/bash  
+# #
+# Description
+#
+#
+##
+
+##
+# Show debug
+##
+if [ $DEBUG = true ]; then
+   echo "Install debs software";
+fi
+
+#apt-get update
+
+
+##
+#  Web server software
+##
+if [ "${WEBSERVER}" = "" ]; then
+   echo "No webserver software been selected";
+fi
+
+if [ "${WEBSERVER}" = "apache" ]; then
+   echo "Installing Apache2";
+   apt-get install apache2 -y
+fi
+
+if [ "${WEBSERVER}" = "nginx" ]; then
+   echo "Installing Nginx";
+   apt-get install nginx -y
+fi

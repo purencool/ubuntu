@@ -1,0 +1,52 @@
+#!/bin/bash  
+# #
+# Description
+#
+#
+##
+        
+##
+# Global variables
+##
+DEINSTALL=$1;
+
+
+##
+# Show debug
+##
+DEBUG=true;
+if [ $DEBUG = true ]; then
+   echo "Debug is on";
+   
+fi
+
+##
+# Global directory path
+##
+DIR="${BASH_SOURCE%/*}"
+if [ $DEBUG = true ]; then
+   echo "Directory path $DIR";
+   
+fi
+
+##
+# Get config installation variables
+##
+source "${DIR}/config"
+
+##
+# Install or deinstall software
+##
+if [ "${DEINSTALL}" = "-d" ]; then
+   echo "Deinstalling software";
+   source "${DIR}/custom/purge_software"
+   source "${DIR}/contrib/purge_software"
+   source "${DIR}/debs/purge_software"
+else
+   echo "Installing software"
+   source "${DIR}/debs/install_software"
+   source "${DIR}/contrib/install_software"
+   source "${DIR}/custom/install_software"
+fi
+ 
+

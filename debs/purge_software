@@ -1,0 +1,31 @@
+#!/bin/bash  
+# #
+# Description
+#
+#
+##
+
+##
+# Show debug
+##
+if [ $DEBUG = true ]; then
+   echo "Purge debs software";
+fi
+
+ 
+##
+#  Web server software
+##
+if [ "${WEBSERVER}" = "" ]; then
+   echo "No webserver software been selected to purge";
+fi
+
+if [ "${WEBSERVER}" = "apache" ]; then
+   echo "Purging Apache2";
+   apt-get purge apache2 -y
+fi
+
+if [ "${WEBSERVER}" = "nginx" ]; then
+   echo "Purging Nginx";
+   apt-get purge nginx -y
+fi

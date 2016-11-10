@@ -1,0 +1,13 @@
+#!/bin/bash  
+# #
+# Description
+#
+#
+##
+
+##
+# Show debug
+##
+if [ $DEBUG = true ]; then
+   echo "Install custom software";
+fi
