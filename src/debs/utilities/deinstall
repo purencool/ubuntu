@@ -1,0 +1,11 @@
+#!/bin/bash  
+# #
+# Description
+#
+#
+##
+if [ $DEBUG = true ]; then
+   echo "Deinstalling utility software";
+fi
+apt-get --purge autoremove git -y
+apt-get --purge autoremove wget -y

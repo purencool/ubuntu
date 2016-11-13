@@ -1,0 +1,11 @@
+#!/bin/bash  
+# #
+# Description
+#
+#
+##
+if [ $DEBUG = true ]; then
+   echo "Installing utility software";
+fi
+apt-get install git
+apt-get install wget

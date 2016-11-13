@@ -1,0 +1,35 @@
+#!/bin/bash  
+# #
+# Description
+#
+#
+##
+
+##
+#  Web server software
+##
+if [ "${WEBSERVER}" = "" ]; then
+   echo "No webserver software been selected to purge";
+fi
+
+if [ "${WEBSERVER}" = "lamp" ]; then
+   echo "Purging Lamp";
+   apt-get remove apache2 -y
+   apt-get --purge autoremove apache2 -y
+
+
+fi
+
+if [ "${WEBSERVER}" = "limp" ]; then
+   echo "Purging ";
+   apt-get remove nginx -y
+   apt-get --purge autoremove nginx -y
+fi
+
+##
+#  Mysql software
+##
+apt-get -y purge mariadb-server mariadb-client
+
+
+

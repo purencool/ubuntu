@@ -1,0 +1,41 @@
+#!/bin/bash  
+# #
+# Description
+#
+#
+##
+
+
+##
+#  Web server software
+##
+if [ "${WEBSERVER}" = "" ]; then
+   echo "No webserver software been selected";
+fi
+
+if [ "${WEBSERVER}" = "lamp" ]; then
+   echo "Installing Lamp";
+   apt-get install apache2 -y
+ 
+fi
+
+if [ "${WEBSERVER}" = "limp" ]; then
+   echo "Installing Nginx";
+   apt-get install nginx -y
+fi
+
+##
+#  Mysql software
+##
+apt-get -y install mariadb-server mariadb-client
+mysql_secure_installation <<EOF
+
+${mysql_area[1]}
+${mysql_area[2]}
+${mysql_area[3]}
+${mysql_area[4]}
+${mysql_area[5]}
+${mysql_area[6]}
+EOF
+
+

@@ -5,12 +5,28 @@
 #
 ##
 
-if [ $DEBUG = true ]; then
-   echo "Configuration script";
-fi
+DEBUG=true;
 ##
-# web server options 
-# - apache
-# - nginx
+# Web server options 
+# - lamp
+# - limp
 ##
-WEBSERVER='apache'
+WEBSERVER='lamp'
+
+##
+# Mysql secure variables
+##
+#Enter current password for root (enter for none): <-- press enter
+#Set root password? [Y/n] <-- y
+mysql_area[1]=y
+#New password: <-- Enter the new MariaDB root password here
+mysql_area[2]=secret
+#Re-enter new password: <-- Repeat the password
+mysql_area[3]=secret
+#Remove anonymous users? [Y/n] <-- y
+mysql_area[4]=y
+#Disallow root login remotely? [Y/n] <-- y
+mysql_area[5]=y
+#Reload privilege tables now? [Y/n] <-- y
+mysql_area[6]=y
+

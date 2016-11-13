@@ -10,16 +10,6 @@
 ##
 DEINSTALL=$1;
 
-
-##
-# Show debug
-##
-DEBUG=true;
-if [ $DEBUG = true ]; then
-   echo "Debug is on";
-   
-fi
-
 ##
 # Global directory path
 ##
@@ -33,6 +23,15 @@ fi
 # Get config installation variables
 ##
 source "${DIR}/config"
+
+##
+# Show debug
+##
+if [ $DEBUG = true ]; then
+   echo "Debug is on";
+   
+fi
+
 
 ##
 # Install or deinstall software

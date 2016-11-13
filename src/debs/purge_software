@@ -12,20 +12,13 @@ if [ $DEBUG = true ]; then
    echo "Purge debs software";
 fi
 
+
+source "${DIR}/src/debs/utilities/deinstall";
+source "${DIR}/src/debs/lamp/deinstall";
+
+
+##
+# Auto remove
+##
+apt-get -y autoremove;
  
-##
-#  Web server software
-##
-if [ "${WEBSERVER}" = "" ]; then
-   echo "No webserver software been selected to purge";
-fi
-
-if [ "${WEBSERVER}" = "apache" ]; then
-   echo "Purging Apache2";
-   apt-get purge apache2 -y
-fi
-
-if [ "${WEBSERVER}" = "nginx" ]; then
-   echo "Purging Nginx";
-   apt-get purge nginx -y
-fi
