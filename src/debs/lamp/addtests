@@ -5,6 +5,5 @@
 #
 ##
 if [ $DEBUG = true ]; then
-   echo "Add infomation";
+   echo "Adding tests";
 fi
-#apt-get -y install <package>

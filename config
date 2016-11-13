@@ -5,7 +5,21 @@
 #
 ##
 
+##
+# Show debug messages
+##
 DEBUG=true;
+
+##
+# Install development enviroment
+##
+DEVELOPMENT=true;
+
+##
+# Base domain
+##
+BASEDOMAIN='purencool.local'
+
 ##
 # Web server options 
 # - lamp

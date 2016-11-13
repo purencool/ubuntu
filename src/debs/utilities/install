@@ -7,5 +7,12 @@
 if [ $DEBUG = true ]; then
    echo "Installing utility software";
 fi
+apt-get install ssh
 apt-get install git
 apt-get install wget
+apt-get install zip
+
+if [ $DEVELOPMENT = true ]; then
+   echo "Installing utility software";
+   apt-get install vagrant -y
+fi

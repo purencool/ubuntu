@@ -1,0 +1,10 @@
+#!/bin/bash  
+# #
+# Description
+#
+#
+##
+if [ $DEBUG = true ]; then
+   echo "Deinstall lets encrypt";
+fi
+apt-get --purge autoremove python-letsencrypt-apache -y

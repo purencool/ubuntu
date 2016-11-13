@@ -1,0 +1,11 @@
+#!/bin/bash  
+# #
+# Description
+#
+#
+##
+if [ $DEBUG = true ]; then
+   echo "Install lets encrypt";
+fi
+apt-get -y install python-letsencrypt-apache
+letsencrypt --apache -d ${BASEDOMAIN}

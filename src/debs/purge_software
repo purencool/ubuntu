@@ -15,6 +15,7 @@ fi
 
 source "${DIR}/src/debs/utilities/deinstall";
 source "${DIR}/src/debs/lamp/deinstall";
+source "${DIR}/src/debs/lets_encrypt/deinstall";
 
 
 ##
