@@ -5,6 +5,11 @@
 #
 ##
 if [ $DEBUG = true ]; then
-   echo "Add infomation";
+   echo "Installing Drupal cli software";
 fi
 #apt-get -y install <package>
+curl https://drupalconsole.com/installer -L -o drupal.phar
+mv drupal.phar /usr/local/bin/drupal
+chmod +x /usr/local/bin/drupal
+echo 'source "$HOME/.console/console.rc" 2>/dev/null' >> ~/.bashrc 
+/usr/local/bin/drupal init

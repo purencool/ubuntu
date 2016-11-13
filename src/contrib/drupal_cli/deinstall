@@ -5,6 +5,6 @@
 #
 ##
 if [ $DEBUG = true ]; then
-   echo "Add infomation";
+   echo "Deinstalling Drupal cli software";
 fi
 #apt-get --purge autoremove <package> -y
