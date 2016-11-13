@@ -1,0 +1,10 @@
+#!/bin/bash  
+# #
+# Description
+#
+#
+##
+if [ $DEBUG = true ]; then
+   echo "Add infomation";
+fi
+#apt-get --purge autoremove <package> -y

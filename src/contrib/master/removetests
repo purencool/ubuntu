@@ -1,0 +1,9 @@
+#!/bin/bash  
+# #
+# Description
+#
+#
+##
+if [ $DEBUG = true ]; then
+   echo "Adding tests";
+fi
