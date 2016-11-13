@@ -8,3 +8,10 @@ if [ $DEBUG = true ]; then
    echo "Deinstall lets encrypt";
 fi
 apt-get --purge autoremove python-letsencrypt-apache -y
+
+##
+# Add cron job to update lets encrypt
+##
+croncmd="/usr/bin/letsencrypt renew >> /var/log/le-renew.log"
+cronjob="30 2 * * 1  $croncmd"
+( crontab -l | grep -v -F "$cronjob" ) | crontab -

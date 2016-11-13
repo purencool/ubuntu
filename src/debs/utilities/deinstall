@@ -12,3 +12,4 @@ apt-get --purge autoremove ssh -y
 apt-get --purge autoremove wget -y
 apt-get --purge autoremove vagrant -y
 apt-get --purge autoremove zip -y
+apt-get --purge rsync zip -y
