@@ -11,4 +11,5 @@
 if [ $DEBUG = true ]; then
    echo "Install contrib software";
 fi
-source "${DIR}/src/contrib/drupal_cli/install";
+source "${DIR}/src/contrib/structure/install";
+#source "${DIR}/src/contrib/drupal_cli/install";

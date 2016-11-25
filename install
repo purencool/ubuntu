@@ -48,5 +48,3 @@ else
    source "${DIR}/src/contrib/install_software"
    source "${DIR}/src/custom/install_software"
 fi
- 
-

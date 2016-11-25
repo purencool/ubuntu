@@ -11,4 +11,6 @@
 if [ $DEBUG = true ]; then
    echo "Purge contrib software";
 fi
-source "${DIR}/src/contrib/drupal_cli/deinstall";
+source "${DIR}/src/contrib/structure/deinstall";
+
+#source "${DIR}/src/contrib/drupal_cli/deinstall";

@@ -1,0 +1,10 @@
+#!/bin/bash  
+# #
+# Description
+#
+#
+##
+if [ $DEBUG = true ]; then
+   echo "Create built in file structure";
+fi
+mkdir /var/www/apps

@@ -10,7 +10,6 @@ fi
 apt-get --purge autoremove ssh -y
 #apt-get --purge autoremove git -y
 apt-get --purge autoremove wget -y
-apt-get --purge autoremove vagrant -y
 apt-get --purge autoremove zip -y
 apt-get --purge rsync zip -y
 apt-get --purge curl -y

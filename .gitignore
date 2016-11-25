@@ -1,3 +1,7 @@
 .idea
 .data/*
+*.geany
 projects
+console
+console/*
+
