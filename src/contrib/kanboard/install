@@ -1,0 +1,12 @@
+#!/bin/bash  
+# #
+# Description
+#
+#
+##
+if [ $DEBUG = true ]; then
+   echo "Install kanboard and plugins";
+fi
+
+git clone https://github.com/kanboard/kanboard.git /var/www/html/apps/kanboard
+#composer install --no-dev  /var/www/html/apps  #for testing

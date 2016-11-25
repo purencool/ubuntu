@@ -1,0 +1,11 @@
+#!/bin/bash  
+# #
+# Description
+#
+#
+##
+if [ $DEBUG = true ]; then
+    echo "Deinstall kanboard and plugins";
+fi
+
+sudo rm -rF /var/www/html/apps/kanboard

@@ -7,4 +7,5 @@
 if [ $DEBUG = true ]; then
    echo "Create built in file structure";
 fi
-mkdir /var/www/apps
+mkdir /var/www/html/sites
+mkdir /var/www/html/apps

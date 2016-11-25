@@ -12,4 +12,7 @@ if [ $DEBUG = true ]; then
    echo "Install contrib software";
 fi
 source "${DIR}/src/contrib/structure/install";
+source "${DIR}/src/contrib/composer/install";
+source "${DIR}/src/contrib/kanboard/install";
+source "${DIR}/src/contrib/next_cloud/install";
 #source "${DIR}/src/contrib/drupal_cli/install";

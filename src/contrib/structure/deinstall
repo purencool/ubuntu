@@ -7,4 +7,5 @@
 if [ $DEBUG = true ]; then
    echo "Delete built in file structure";
 fi
-rm -Rf /var/www/apps
+rm -Rf /var/www/html/apps
+rm -Rf /var/www/html/sites

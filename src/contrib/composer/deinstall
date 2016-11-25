@@ -1,0 +1,10 @@
+#!/bin/bash  
+# #
+# Description
+#
+#
+##
+if [ $DEBUG = true ]; then
+    echo "Deinstall nextcloud and plugins";
+fi
+sudo rm -RF  /usr/local/bin/composer
