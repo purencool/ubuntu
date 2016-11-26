@@ -16,6 +16,7 @@ if [ "${WEBSERVER}" = "lamp" ]; then
    echo "Purging Lamp";
    apt-get remove apache2 -y
    apt-get --purge autoremove apache2 -y
+   rm -Rf /etc/apache2
 
 
 fi
@@ -30,12 +31,18 @@ fi
 #  Mysql software
 ##
 apt-get -y --purge autoremove mariadb-server mariadb-client
+#sudo rm -Rf /etc/mysql
 
 ##
 #  Php  software
 ##
 apt-get --purge autoremove php7.0 libapache2-mod-php7.0 -y
-apt-get --purge autoremove php7.0-mysql php7.0-curl php7.0-gd php7.0-intl php-pear php-imagick php7.0-imap php7.0-mcrypt php-memcache  php7.0-pspell php7.0-recode php7.0-sqlite3 php7.0-tidy php7.0-xmlrpc php7.0-xsl php7.0-mbstring php-gettext -y
-apt-get --purge autoremove php-apcu -y
+apt-get --purge autoremove php7.0-mysql php7.0-curl  -y
+apt-get --purge autoremove php7.0-gd php7.0-intl php-pear -y
+apt-get --purge autoremove php7.0-mcrypt  php-memcache  php7.0-pspell -y
+apt-get --purge autoremove php-imagick php7.0-imap php7.0-xmlrpc php7.0-xsl -y
+apt-get --purge autoremove php7.0-sqlite3 php7.0-tidy php7.0-recode -y
+apt-get --purge autoremove php-apcu php7.0-mbstring php-gettext -y 
+sudo rm -Rf /etc/php/*
 
 

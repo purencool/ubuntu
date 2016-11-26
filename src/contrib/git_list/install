@@ -1,0 +1,12 @@
+#!/bin/bash  
+# #
+# Description
+#
+#
+##
+if [ $DEBUG = true ]; then
+   echo "Install gitlist and plugins";
+fi
+
+git clone --depth=1 https://github.com/klaussilveira/gitlist.git /var/www/html/apps/gitlist
+

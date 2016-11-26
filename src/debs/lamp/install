@@ -16,34 +16,63 @@ fi
 if [ "${WEBSERVER}" = "lamp" ]; then
    echo "Installing Lamp";
    apt-get install apache2 -y
+   #echo "${BASEDOMAIN}" >> /etc/apache2/apache2.conf
  
 fi
 
 if [ "${WEBSERVER}" = "limp" ]; then
    echo "Installing Nginx";
-   apt-get install nginx -y
+   #apt-get install nginx -y
 fi
 
 ##
 #  Mysql software
 ##
-apt-get -y install mariadb-server mariadb-client
-mysql_secure_installation <<EOF
-
-${mysql_area[1]}
-${mysql_area[2]}
-${mysql_area[3]}
-${mysql_area[4]}
-${mysql_area[5]}
-${mysql_area[6]}
-EOF
+#apt-get -y install mariadb-server mariadb-client
+#mysql_secure_installation <<EOF
+#
+#${mysql_area[1]}
+#${mysql_area[2]}
+#${mysql_area[3]}
+#${mysql_area[4]}
+#${mysql_area[5]}
+#${mysql_area[6]}
+#EOF
 
 ##
 # Php installation
 ##
-apt-get -y install php7.0 libapache2-mod-php7.0 php-pear php-memcache 
-apt-get -y install php7.0-mysql php7.0-curl php7.0-gd php7.0-intl 
-apt-get -y install php-apcu  php-imagick php7.0-imap php7.0-mcrypt 
-apt-get -y install php7.0-pspell php7.0-recode  php-gettext
-apt-get -y install php7.0-xmlrpc php7.0-xsl php7.0-mbstring 
-apt-get -y install php-cli php-mbstring  php7.0-sqlite3 php7.0-tidy
+apt-get -y install  php7.0 php7.0-fpm
+#apt-get -y install php7.0 libapache2-mod-php7.0 php-pear 
+#apt-get -y install php7.0-mysql php7.0-curl php7.0-gd 
+#apt-get -y install php-memcache php7.0-intl php7.0-mcrypt
+#apt-get -y install php-apcu  php-imagick php7.0-imap  
+#apt-get -y install php7.0-pspell php7.0-recode  php-gettext
+#apt-get -y install php7.0-xmlrpc php7.0-xsl php7.0-mbstring 
+#apt-get -y install php-cli php-mbstring  php7.0-sqlite3 php7.0-tidy
+#apt-get -y install libapache2-mod-php libyaml-0-2 php-auth php-auth-sasl 
+#apt-get -y install php-crypt-chap php-db php-log php-mail php-mdb2 php-net-smtp 
+#apt-get -y install php-net-socket php-soap php7.0-cgi php7.0-soap 
+ 
+
+
+
+if [ "${WEBSERVER}" = "lamp" ]; then
+   cp $DIR/src/debs/lamp/config/000-default.conf /etc/apache2/sites-available/000-default.conf
+   cp $DIR/src/debs/lamp/config/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf
+   cp $DIR/src/debs/lamp/config/info.php /var/www/html/info.php
+   
+   
+   #systemctl status php7.0-fpm
+   #systemctl start php7.0-fpm
+   systemctl enable php7.0-fpm #on boot enable php fpm
+   
+   sudo service apache2 restart
+   
+ 
+fi
+
+if [ "${WEBSERVER}" = "limp" ]; then
+   echo "Restart engine ";
+fi
+

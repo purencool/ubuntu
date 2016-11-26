@@ -13,6 +13,6 @@ if [ $DEBUG = true ]; then
 fi
 
 apt-get update
-source "${DIR}/src/debs/utilities/install";
+#source "${DIR}/src/debs/utilities/install";
 source "${DIR}/src/debs/lamp/install";
 #source "${DIR}/src/debs/lets_encrypt/install";

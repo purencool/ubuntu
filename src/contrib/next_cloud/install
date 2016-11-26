@@ -8,4 +8,4 @@ if [ $DEBUG = true ]; then
     echo "Install Nextcloud and plugins";
 fi
 
-git clone https://github.com/nextcloud/server.git /var/www/html/apps/nextcloud
+git clone --depth=1 https://github.com/nextcloud/server.git /var/www/html/apps/nextcloud

@@ -1,0 +1,11 @@
+#!/bin/bash  
+# #
+# Description
+#
+#
+##
+if [ $DEBUG = true ]; then
+    echo "Deinstall gitlist and plugins";
+fi
+
+sudo rm -rF /var/www/html/apps/gitlist

@@ -15,4 +15,8 @@ source "${DIR}/src/contrib/structure/install";
 source "${DIR}/src/contrib/composer/install";
 source "${DIR}/src/contrib/kanboard/install";
 source "${DIR}/src/contrib/next_cloud/install";
+source "${DIR}/src/contrib/git_list/install";
 #source "${DIR}/src/contrib/drupal_cli/install";
+
+chown -Rf www-data:www-data /var/www/html
+

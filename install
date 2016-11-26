@@ -39,12 +39,12 @@ fi
 ##
 if [ "${DEINSTALL}" = "-d" ]; then
    echo "Deinstalling software";
-   source "${DIR}/src/custom/purge_software"
-   source "${DIR}/src/contrib/purge_software"
+   #source "${DIR}/src/custom/purge_software"
+   #source "${DIR}/src/contrib/purge_software"
    source "${DIR}/src/debs/purge_software"
 else
    echo "Installing software"
    source "${DIR}/src/debs/install_software"
-   source "${DIR}/src/contrib/install_software"
-   source "${DIR}/src/custom/install_software"
+   #source "${DIR}/src/contrib/install_software"
+   #source "${DIR}/src/custom/install_software"
 fi
