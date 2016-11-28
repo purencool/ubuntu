@@ -1,4 +1,4 @@
-#!/bin/bash  
+#!/bin/bash
 # #
 # Description
 #
@@ -9,4 +9,4 @@ if [ $DEBUG = true ]; then
 fi
 
 git clone --depth=1 https://github.com/klaussilveira/gitlist.git /var/www/html/apps/gitlist
-
+sudo /var/www/html/apps/gitlist/composer install

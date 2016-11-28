@@ -43,13 +43,19 @@ EOF
 # Php installation
 ##
 apt-get -y install php7.0 libapache2-mod-php7.0
+apt-get -y install php-cli php-apcu  php7.0-sqlite3
+apt-get -y install php-memcache php7.0-intl php7.0-mcrypt
+apt-get -y install php-net-socket php7.0-soap
+apt-get -y install php7.0-xmlrpc php7.0-xsl php7.0-mbstring
+apt-get -y install php7.0-pdo
+
 #apt-get -y install php7.0 libapache2-mod-php7.0 php-pear
 #apt-get -y install php7.0-mysql php7.0-curl php7.0-gd
-#apt-get -y install php-memcache php7.0-intl php7.0-mcrypt
+
 #apt-get -y install php-apcu  php-imagick php7.0-imap
 #apt-get -y install php7.0-pspell php7.0-recode  php-gettext
-#apt-get -y install php7.0-xmlrpc php7.0-xsl php7.0-mbstring
-#apt-get -y install php-cli php-mbstring  php7.0-sqlite3 php7.0-tidy
+#apt-get -y
+#apt-get -y install php-cli php-mbstring php7.0-tidy
 #apt-get -y install libapache2-mod-php libyaml-0-2 php-auth php-auth-sasl
 #apt-get -y install php-crypt-chap php-db php-log php-mail php-mdb2 php-net-smtp
 #apt-get -y install php-net-socket php-soap php7.0-cgi php7.0-soap

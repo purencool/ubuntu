@@ -1,4 +1,4 @@
-#!/bin/bash  
+#!/bin/bash
 # #
 # Description
 #
@@ -9,3 +9,5 @@ if [ $DEBUG = true ]; then
 fi
 curl -sS https://getcomposer.org/installer -o composer-setup.php
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+mkdir ~/.composer/cache/repo/
+chown -Rf $USER:$USER $~/.composer
