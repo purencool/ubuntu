@@ -1,4 +1,4 @@
-#!/bin/bash  
+#!/bin/bash
 # #
 # Description
 #
@@ -17,7 +17,7 @@ DEINSTALL=$1;
 DIR="${BASH_SOURCE%/*}"
 if [ $DEBUG = true ]; then
    echo "Directory path $DIR";
-   
+
 fi
 
 ##
@@ -30,7 +30,7 @@ source "${DIR}/config"
 ##
 if [ $DEBUG = true ]; then
    echo "Debug is on";
-   
+
 fi
 
 
@@ -39,12 +39,12 @@ fi
 ##
 if [ "${DEINSTALL}" = "-d" ]; then
    echo "Deinstalling software";
-   #source "${DIR}/src/custom/purge_software"
-   #source "${DIR}/src/contrib/purge_software"
+   source "${DIR}/src/custom/purge_software"
+   source "${DIR}/src/contrib/purge_software"
    source "${DIR}/src/debs/purge_software"
 else
    echo "Installing software"
    source "${DIR}/src/debs/install_software"
-   #source "${DIR}/src/contrib/install_software"
-   #source "${DIR}/src/custom/install_software"
+   source "${DIR}/src/contrib/install_software"
+   source "${DIR}/src/custom/install_software"
 fi
