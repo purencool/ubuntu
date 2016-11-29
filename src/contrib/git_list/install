@@ -8,7 +8,24 @@ if [ $DEBUG = true ]; then
    echo "Install gitlist and plugins";
 fi
 
+##
+# Get git list and install
+##
 git clone --depth=1 https://github.com/klaussilveira/gitlist.git /var/www/html/apps/gitlist
 cd '/var/www/html/apps/gitlist/';
 composer install
+cp $DIR/src/contrib/git_list/config/config.ini /var/www/html/apps/gitlist/config.ini
+
+##
+# Make git directory and add test repo
+##
+mkdir '/home/git/'
+mkdir '/home/git/repositories/'
+cd /home/git/repositories/
+git init test
+chown -rF www-data:www-data /home/git
+
+##
+# Return to directory
+##
 cd $DIR
